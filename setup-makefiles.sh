@@ -41,7 +41,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 # Copyright headers and guards
 write_headers
 
-write_makefiles "$MY_DIR"/proprietary-files.txt
+write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # Finish
 write_footers
