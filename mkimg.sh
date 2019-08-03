@@ -1,6 +1,6 @@
 #/bin/bash
 
-LINEAGEVERSION=lineage-15.1
+LINEAGEVERSION=lineage-16.0
 DATE=`date +%Y%m%d`
 IMGNAME=$LINEAGEVERSION-$DATE-rpi3.img
 IMGSIZE=4
