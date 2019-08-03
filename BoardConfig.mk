@@ -31,6 +31,7 @@ TARGET_CPU_VARIANT := cortex-a53
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage
 TARGET_KERNEL_CONFIG := lineageos_rpi3_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-gnueabihf-
 TARGET_KERNEL_SOURCE := kernel/brcm/rpi3
 
 # Audio
