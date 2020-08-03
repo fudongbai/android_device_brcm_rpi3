@@ -2,7 +2,7 @@
 
 LINEAGEVERSION=lineage-16.0
 DATE=`date +%Y%m%d`
-IMGNAME=$LINEAGEVERSION-$DATE-rpi3.img
+IMGNAME=$LINEAGEVERSION-$DATE-rpi3-arm64.img
 IMGSIZE=4
 OUTDIR=${ANDROID_PRODUCT_OUT:="../../../out/target/product/rpi3"}
 
@@ -24,7 +24,7 @@ else
 	echo p
 	echo 1
 	echo
-	echo +128M
+	echo +256M
 	echo n
 	echo p
 	echo 2
@@ -70,8 +70,9 @@ else
 	sync
 	cp boot/* sdcard/boot
 	cp ../../../vendor/brcm/rpi3/proprietary/boot/* sdcard/boot
-	cp $OUTDIR/obj/KERNEL_OBJ/arch/arm/boot/zImage sdcard/boot
-	cp -R $OUTDIR/obj/KERNEL_OBJ/arch/arm/boot/dts/* sdcard/boot
+	cp $OUTDIR/obj/KERNEL_OBJ/arch/arm64/boot/Image sdcard/boot/kernel8.img
+	cp -R $OUTDIR/obj/KERNEL_OBJ/arch/arm64/boot/dts/broadcom/* sdcard/boot
+	cp -R $OUTDIR/obj/KERNEL_OBJ/arch/arm64/boot/dts/overlays/ sdcard/boot
 	cp $OUTDIR/ramdisk.img sdcard/boot
 	sync
 	umount /dev/mapper/${LOOPDEV}p1

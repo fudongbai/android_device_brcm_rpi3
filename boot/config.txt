@@ -1,6 +1,6 @@
 # Kernel
-kernel=zImage
-initramfs ramdisk.img 0x01f00000
+arm_64bit=1
+initramfs ramdisk.img followkernel
 start_x=1
 
 # Audio
